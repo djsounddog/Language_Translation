@@ -17,23 +17,20 @@ public class Numbers extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //Create an array of words
-        ArrayList<String> words = new ArrayList<>();
-        new Word("one", "lutti");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
-        words.add("eleven");
-        words.add("twelve");
-        words.add("thirteen");
-        words.add("fourteen");
+        ArrayList<Word> words = new ArrayList<>();
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("two", "otiiko"));
+        words.add(new Word("three", "tolookosu"));
+        words.add(new Word("four", "oyyisa"));
+        words.add(new Word("five", "massokka"));
+        words.add(new Word("six", "temmokka"));
+        words.add(new Word("seven", "kenekaku"));
+        words.add(new Word("eight", "kawinta"));
+        words.add(new Word("nine", "wo'e"));
+        words.add(new Word("ten", "na'aacha"));
+
+        ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>
                 (this, R.layout.list_item, words);
 
         ListView listView = findViewById(R.id.list);
