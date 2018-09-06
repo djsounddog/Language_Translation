@@ -3,9 +3,11 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Numbers extends AppCompatActivity {
 
@@ -16,7 +18,7 @@ public class Numbers extends AppCompatActivity {
 
         //Create an array of words
         ArrayList<String> words = new ArrayList<>();
-        words.add("one");
+        new Word("one", "lutti");
         words.add("two");
         words.add("three");
         words.add("four");
@@ -32,7 +34,7 @@ public class Numbers extends AppCompatActivity {
         words.add("fourteen");
 
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>
-                (this, android.R.layout.simple_list_item_1, words);
+                (this, R.layout.list_item, words);
 
         ListView listView = findViewById(R.id.list);
 
